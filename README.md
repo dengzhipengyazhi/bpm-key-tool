@@ -2,25 +2,37 @@
 
 > 一个完全在浏览器本地运行的 DJ / 练舞辅助小工具：拖入音频，自动分析 **BPM、调性（含 Camelot）和 8 拍网格**，可变速试听、循环练习、手动微调对齐，并导出节拍网格或变速音频。
 
-![界面截图](docs/screenshot.png)
+![界面截图](https://github.com/dengzhipengyazhi/bpm-key-tool/releases/download/v1.6/screenshot.png)
 
 - 无需安装、无需账号、**文件不会上传**（全部在浏览器本地完成）
 - 单文件网页应用（`index.html` 内嵌全部逻辑），下载即用
+- **不提供在线托管版本**（未启用 GitHub Pages），下载到本地使用
 
-## 在线使用
+## 下载使用
 
-仓库目前是**私有预览**状态（示例音频版权待确认后才会公开），暂未开启 GitHub Pages；
-公开后会在此处补充在线地址。
+### 方式一：下载 ZIP（最简单）
 
-## 本地使用
+1. 到 [Releases 页面](https://github.com/dengzhipengyazhi/bpm-key-tool/releases) 下载 **`BPM-Key-Tool-v1.6.zip`**
+   （或者点仓库右上角 **Code → Download ZIP**）；
+2. 解压后双击 `index.html`，用 Chrome / Edge 等现代浏览器打开；
+3. 把 MP3 / WAV 等音频文件拖进页面即可自动分析。
+
+### 方式二：git clone
 
 ```bash
-# 方式一：放在本地静态服务器上（推荐，示例按钮可用）
+git clone https://github.com/dengzhipengyazhi/bpm-key-tool.git
+cd bpm-key-tool
+# 双击 index.html，或起一个本地静态服务器：
 python -m http.server 8000
-# 然后浏览器打开 http://127.0.0.1:8000/
-
-# 方式二：直接双击 index.html（拖入文件可用；"加载示例"受浏览器 file:// 限制不可用）
+# 然后打开 http://127.0.0.1:8000/
 ```
+
+> 直接双击 `index.html`（file:// 方式）时，拖入文件、分析、导出等功能都可用；
+> 只有"加载示例"按钮受浏览器限制无法读取同目录文件。
+> 需要示例功能时请用本地静态服务器方式打开。
+
+> **关于 demo.wav：** 内置示例音频暂未随仓库发布（版权确认中）。如需"加载示例"按钮，
+> 请把 `demo.wav` 放到 `index.html` 同目录；或者直接拖入自己的音频，其他功能不受影响。
 
 ## 功能
 
@@ -35,10 +47,7 @@ python -m http.server 8000
 | 精细对齐 | 手动 BPM、点拍定速、偏移（ms）、设为第 1 拍、网格 ±10 ms |
 | 节拍器 | 可开关的点击轨 |
 | 导出 | 节拍网格 CSV、波形 PNG、变速音频（WAV / MP3；仅音乐 / 音乐+节拍 / 仅节拍；可含 4 拍预备） |
-| 示例音频 | 一键加载同目录的 `demo.wav`（34 秒节奏示例；本仓库暂未包含，见下方说明） |
-
-> **关于 demo.wav：** 内置示例音频暂未纳入本仓库（版权确认中）。如需使用"加载示例"按钮，
-> 请把 `demo.wav` 放在 `index.html` 同目录；或者直接拖入自己的音频文件，其他功能不受影响。
+| 示例音频 | 一键加载同目录的 `demo.wav`（本仓库暂未包含，见上方说明） |
 
 > BPM / 调性均为**估算值**，会受混音、半速/倍速、调式关系影响；正式使用请以 Serato / Mixed In Key 等 DJ 软件结果为准。
 
