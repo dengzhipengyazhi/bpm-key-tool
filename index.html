@@ -173,7 +173,6 @@
       <option value="mp3">MP3</option>
     </select>
     <button id="wav">导出音频</button>
-    <button id="demo">加载示例</button>
   </section>
 
   <footer>
@@ -2647,23 +2646,6 @@ window.SoundTouchJS = { SoundTouch, SimpleFilter, WebAudioBufferSource };
         setStatus("导出失败：" + (err && err.message ? err.message : "未知错误"));
       }
     }, 30);
-  });
-
-  $("demo").addEventListener("click", async () => {
-    try {
-      setStatus("加载示例…");
-      ensureCtx();
-      const res = await fetch("demo.wav");
-      if (!res.ok) throw new Error("示例文件未找到");
-      const blob = await res.blob();
-      setAudioSource(blob);
-      const buf = await blob.arrayBuffer();
-      const audioBuffer = await audioCtx.decodeAudioData(buf);
-      analyze(audioBuffer);
-    } catch (err) {
-      console.error(err);
-      setStatus("示例加载失败：直接双击打开时无法读取同目录文件，请改为拖入自己的音频。");
-    }
   });
 
   draw();

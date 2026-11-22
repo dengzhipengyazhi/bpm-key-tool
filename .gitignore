@@ -6,10 +6,6 @@ desktop.ini
 # Logs
 *.log
 
-# Bundled demo audio is kept out of the repository for now (license pending).
-# Place a local demo.wav next to index.html for local testing.
-/demo.wav
-
 # Local tooling
 node_modules/
 .idea/

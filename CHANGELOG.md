@@ -13,6 +13,4 @@
 - Metronome toggle.
 - Export: beat grid CSV, waveform PNG, time-stretched audio as WAV or MP3
   (music only / music + metronome / click only, optional 4-beat count-in).
-- 34-second demo audio support (the `demo.wav` file itself is kept outside this
-  repository for now; pending license confirmation).
 - Single-file, fully offline web app: no uploads, no telemetry.

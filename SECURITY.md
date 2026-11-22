@@ -7,8 +7,8 @@ server-side code, no database and no network communication:
 
 - All audio processing happens locally in the browser (Web Audio API).
 - The page loads no third-party scripts, fonts, analytics or CDNs.
-- The only resource request other than `index.html` itself is the bundled
-  `demo.wav` (same directory).
+- The page makes no network requests at all; everything is loaded from local
+  files in the same folder.
 - No cookies, localStorage, IndexedDB, credentials or personal data.
 
 ## Reporting a vulnerability
