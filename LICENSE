@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----------------------------------------------------------------------------
-NOTE: This MIT license covers the original application code (HTML/CSS/JS UI,
-audio analysis, canvas rendering, export logic, etc.).
-
-The repository also bundles third-party JavaScript libraries inside
-index.html, which remain under their own licenses:
-
-  - lamejs 1.2.1                      - GNU LGPL v3.0
-  - SoundTouch JS 0.3.0              - GNU LGPL v2.1 or later
-
-See THIRD_PARTY_NOTICES.md and the licenses/ directory for details.
